@@ -1,0 +1,163 @@
+@import url(reset.css);
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    height: 55px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "grid-menu grid-search grid-profile";
+    align-items: center;
+}
+
+img {
+    cursor: pointer;
+}
+
+nav {
+    display: grid;
+    row-gap: 25px;
+    padding: 25px;
+    font-size: 14px;
+    place-content: start;
+}
+
+main {
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px;
+    gap: 15px 
+}
+
+.img-btn {
+    width: 25px;
+    height: 25px;
+}
+
+.img-btn:active {
+transform: scale(0.95);
+}
+
+.menu {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    height: 35px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.searchbox {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+.search {
+    width: 350px;
+    height: 40px;
+    border: solid 1px #ccc;
+    padding-left: 15px;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.search::placeholder {
+    font-size: 17px;
+}
+
+.search-btn {
+    height: 40px;
+    width: 55px;
+    border: solid 1px #ccc;
+    background-color: #F8F8F8;
+    cursor: pointer;
+}
+
+.search-btn:active {
+    transform: scale(0.95);
+}
+
+.user {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    margin-right: 25px;
+}
+
+.profile-picture {
+    width: 35px;
+    height: 35px;
+}
+
+.user .img-btn {
+    margin-right: 25px;
+}
+
+.container {
+    height: calc(100vh - 55px);
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas: "nav main";
+}
+
+.nav-btn {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-btn:active {
+    transform: scale(0.97);
+}
+
+.active{
+    font-weight: 700;
+}
+
+.nav-btn img {
+    margin-right: 15px;
+}
+
+.item {
+    height: 265px;
+    padding: 15px;
+}
+
+.img-thumb {
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-areas: "logo title" ". details";
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 700;
+    grid-area: title;
+}
+
+.video-description{
+    grid-area: details;
+    font-size: 12px;
+    font-weight: 400;
+    color: #515151;
+}
